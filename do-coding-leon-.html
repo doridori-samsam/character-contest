@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Poller+One&display=swap');
+        /* animation */
+        @keyframes 수염위{ 
+            from {
+                transform: rotate(-77deg);
+            }
+            to {
+                transform: rotate(-70deg);
+               
+            }
+        }
+
+        @keyframes 수염아래 {
+            from {
+                transform: rotate(77deg);
+            }
+            to {
+                transform: rotate(70deg);
+            }
+        }   
+       @keyframes 수염오른쪽위 {
+            from {
+                transform: rotate(-283deg);
+            }
+            to {
+                transform: rotate(-290deg);
+            }
+        }   
+        @keyframes 수염오른쪽아래 {
+            from {
+                transform: rotate(283deg);
+            }
+            to {
+                transform: rotate(290deg);
+            }
+        }   
+        /*setting*/
+        :root{
+            --pri: #ffb148;
+            --sec: #fee9cd;
+
+        }
+
+        /*reset*/
+        body{
+            position:relative;
+            font-family:'Poller One', cursive;
+            margin: 0;
+            padding: 0;
+            background-color: #c50026;
+        
+                    
+        
+        }
+        .do-code{
+            position:absolute;
+            top:160px;
+            left:290px;
+            margin-bottom: 3px;
+            transform: rotate(90deg);
+            font-size: 40px;
+        }
+        .name{
+            position:absolute;
+            top: 170px;
+            left: 20px;
+            font-size:140px;
+            transform:rotate(90deg);
+        }
+      
+        /* ladyout */
+        /* design */
+
+        *,
+        *:after,
+        *:before {
+            box-sizing: border-box;
+        }
+
+     
+        .leon{
+            position: relative;
+            top:100px;
+            margin: 50px auto;
+            width: 500px;
+            height: 500px;
+            overflow:hidden;
+            /* background-color: white; */
+        }
+
+        .leon .ear{
+            position:absolute;
+            top: 0;
+            width: 89px;
+            height: 90px;
+            border: 8px solid #000;
+            border-radius: 50%;
+            background-color: var(--pri);
+        }
+
+        .leon .ear.left{
+            top: 35px;
+            left: 80px;
+            transform: rotate(-22deg);
+            border-radius:5px 120px 1px 30px;
+            box-shadow: 0 0 20px rgba(0,0,0, 0.5);
+/*             animation: 귀왼쪽 0.8s infinite alternate;  */
+        }
+
+        
+        .leon .ear.right{
+            top: 35px;
+            right: 75px;
+            transform: rotate(30deg);
+            border-radius: 100px 5px 20px 1px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+/*             animation: 귀오른쪽 0.8s infinite alternate; */
+        }
+        
+        .leon .earline.left{
+            position: absolute;
+            top: 23px;
+            left: 12px;
+            width: 35px;
+            height: 27px;
+            background-color: var(--sec);
+            border: 5px solid var(--sec);
+            border-radius: 30%;
+            border-radius:5px 220px 0px 20px;
+            transform: rotate(-5deg);
+        }
+        
+        .leon .earline.right{
+            position: absolute;
+            top: 23px;
+            right: 13px;
+            width: 35px;
+            height: 27px;
+            background-color: var(--sec);
+            border: 5px solid var(--sec);
+            border-radius: 30%;
+            border-radius:220px 5px 20px 0px;
+            transform: rotate(4deg);
+        }
+        
+        
+        .leon .face{
+            position: absolute;
+            bottom: 75px;
+            left: 49px;
+            width: 400px;
+            height: 360px;
+            border-radius:50px;
+            background-color: var(--pri);
+            border: 10px solid black;
+            border-radius: 50%;     
+        
+            
+        }
+        
+        .leon .eye{
+            position: absolute;
+            top: 190px;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: #000;
+        }
+        
+        .eye.left{
+            left:126px;
+        }
+        
+        .eye.right{
+            right: 126px;
+        }
+        
+        .leon .glasses{
+            position: absolute;
+            width: 52px;
+            height: 20px;
+            background-color: transparent;
+            border-top-left-radius: 180px; 
+            border-top-right-radius: 180px; 
+            border: 7px solid black;
+            border-bottom: 0;
+            top: 200px;
+            left: 164px;
+            
+        }
+        
+        .nose{
+            position: absolute;
+            top: 240px;
+            left: 175px;
+            width: 30px;
+            height: 30px;
+            border-radius: 20% 20% 70% 20%;
+            background: black;
+            transform:rotate(-135deg)
+        }
+        
+        .mouthbottom-left{
+            position:absolute;
+            top: 260px;
+            left: 150px;
+            width: 44px;
+            height: 20px; 
+            background-color: transparent;
+            border-bottom-left-radius: 110px;  
+            border-bottom-right-radius: 110px; 
+            border: 6px solid black;
+            border-top: 0;
+        }
+        .mouthbottom-right{
+            position:absolute;
+            top: 260px;
+            right: 150px;
+            width: 44px;
+            height: 20px; 
+            background-color: transparent;
+            border-bottom-left-radius: 110px;  
+            border-bottom-right-radius: 110px; 
+            border: 6px solid black;
+            border-top: 0;
+        }
+
+        .mustache1{
+            position:absolute;
+            border-right: 8px solid black;
+            border-radius: 40%;
+            width: 20px;
+            height: 80px;
+            top: 190px;
+            left: 2px;
+            transform:rotate(-77deg);
+            z-index: 1;
+            animation: 수염위 0.5s infinite alternate;
+            
+            
+        }
+        .mustache2{
+            position:absolute;
+            border-left: 8px solid black;
+            border-radius: 40%;
+            width: 20px;
+            height: 80px;
+            top: 230px;
+            left: 10px;
+            transform:rotate(77deg);
+            z-index: 1;
+            animation: 수염아래 0.5s infinite alternate;
+            
+        }
+        .mustache3{
+            position:absolute;
+            border-left: 8px solid black;
+            border-radius: 40%;
+            width: 20px;
+            height: 80px;
+            top: 190px;
+            right: 2px;
+            transform:rotate(77deg);
+            z-index: 1;
+            animation: 수염오른쪽위 0.5s infinite alternate;
+           
+        }
+        .mustache4{
+            position:absolute;
+            border-right: 8px solid black;
+            border-radius: 40%;
+            width: 20px;
+            height: 80px;
+            top: 230px;
+            right: 9px;
+            transform:rotate(-77deg);
+            z-index: 1;
+            animation: 수염오른쪽아래 0.5s infinite alternate;
+            
+        }
+
+        .stripe1{
+            position:absolute;
+            top: 205px;
+            left: 8px;
+            border:8px solid var(--sec);
+            background-color : var(--sec);
+            width: 82px;
+            height: 25px;
+            border-radius: 45%;
+            opacity: 0.9;
+            
+            
+           
+        }
+        .stripe2{
+            position:absolute;
+            top: 248px;
+            left: 30px;
+            border:8px solid var(--sec);
+            background-color: var(--sec);
+            width: 65px;
+            height: 25px;
+            border-radius: 43%;
+            opacity: 0.9;
+            
+           
+        }
+        .stripe3{
+            position:absolute;
+            top: 205px;
+            right: 8px;
+            border:8px solid var(--sec);
+            background-color:var(--sec);
+            width: 82px;
+            height: 25px;
+            border-radius: 45%;
+            opacity: 0.9;
+            
+           
+        }
+        .stripe4{
+            position:absolute;
+            top: 248px;
+            right: 30px;
+            border:8px solid var(--sec);
+            background-color:var(--sec);
+            width: 65px;
+            height: 25px;
+            border-radius: 43%;
+            opacity: 0.9;
+            
+           
+        }
+        .hat{
+            position:absolute;
+            top: 50px;
+            left: 53px;
+            border:8px solid black;
+            width: 392px;
+            height: 185px;
+            background-color:#4d4d4d;
+            border-top-left-radius: 500px;
+            border-top-right-radius: 500px;
+        }
+        .hat-band{
+            position: absolute;
+            border:8px solid black;
+            background-color: #4d4d4d;
+            width:425px;
+            height: 55px;
+            top:185px;
+            left:36px;
+            border-radius: 25%;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+
+
+        }
+
+        .hat-wrinkle1{
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            border: 3px solid black;
+            border-radius: 38%;
+            background-color: black;
+            height: 30px;
+            
+
+        }
+        .hat-wrinkle2{
+            position: absolute;
+            top: 9px;
+            left: 70px;
+            border: 3px solid black;
+            border-radius: 35%;
+            background-color: black;
+            height: 33px;
+            
+
+        }
+        .hat-wrinkle3{
+            position: absolute;
+            top: 13px;
+            left: 100px;
+            border: 3px solid black;
+            border-radius: 40%;
+            background-color: black;
+            height: 30px;
+         
+
+        }
+        .hat-wrinkle4{
+            position: absolute;
+            top: 20px;
+            left: 150px;
+            border: 3px solid black;
+            border-radius: 40%;
+            background-color: black;
+            height: 22px;
+            
+
+
+        }
+        .hat-wrinkle5{
+            position: absolute;
+            top: 7px;
+            left: 170px;
+            border: 3px solid black;
+            border-radius: 35%;
+            background-color: black;
+            height: 38px;
+            
+        }
+        .hat-wrinkle6{
+            position: absolute;
+            top: 8px;
+            left: 227px;
+            height: 35px;
+            border: 3px solid black;
+            border-radius: 40%;
+            background-color: black;
+            
+
+        }
+        .hat-wrinkle7{
+            position: absolute;
+            top: 10px;
+            left: 290px;
+            border: 3px solid black;
+            border-radius: 35%;
+            background-color: black;
+            height: 36px;
+           
+
+        }
+    
+        .hat-wrinkle8{
+            position: absolute;
+            top: 15px;
+            left: 320px;
+            border: 3px solid black;
+            border-radius: 45%;
+            background-color: black;
+            height: 28px;
+            
+
+        }
+        .hat-wrinkle9{
+            position: absolute;
+            top: 10px;
+            left: 380px;
+            border: 3px solid black;
+            border-radius: 40%;
+            background-color: black;
+            height: 33px;
+            
+
+        }
+
+        .jacket{
+            position:absolute;
+            border: 8px solid black;
+            background-color:black;
+            bottom: -85px;
+            left: 42px;
+            width: 415px;
+            height: 220px;
+            border-top-left-radius: 300px;
+            border-top-right-radius: 300px;
+            z-index: -1;
+
+        }
+
+        .shirt{
+            position:absolute;
+            border:8px solid black;
+            background-color: #fff;
+            height: 140px;
+            width:100px;
+            left: 149px;
+        }
+    </style>
+    <title></title>
+</head>
+<body>
+   <h1 class="do-code">코딩할</h1>
+   <h2 class="name">LEON</h2>
+    <div class="leon">
+        <div class="ear left">
+            <div class="earline left"></div>
+        </div>
+        <div class="ear right">
+            <div class="earline right"></div>
+        </div>
+        <div class="face">
+            <div class="eye left"></div>
+            <div class="glasses"></div>
+            <div class="eye right"></div>
+            <div class="nose"></div>
+            <div class="mouthbottom-left"></div>
+            <div class="mouthbottom-right"></div>
+            <div class="mustache1"></div>
+            <div class="mustache2"></div>
+            <div class="mustache3"></div>
+            <div class="mustache4"></div>
+            <div class="stripe1"></div>
+            <div class="stripe2"></div>
+            <div class="stripe3"></div>
+            <div class="stripe4"></div>
+            
+        </div>
+        <div class="hat">
+        </div>
+        <div class="hat-band">
+            <div class="hat-wrinkle1"></div>
+            <div class="hat-wrinkle2"></div>
+            <div class="hat-wrinkle3"></div>
+            <div class="hat-wrinkle4"></div>
+            <div class="hat-wrinkle5"></div>
+            <div class="hat-wrinkle6"></div>
+            <div class="hat-wrinkle7"></div>
+            <div class="hat-wrinkle8"></div>
+            <div class="hat-wrinkle9"></div>
+        </div>
+        <div class="jacket">
+            <div class="shirt"></div>
+        </div>
+    </div>
+    
+</body>
+</html>

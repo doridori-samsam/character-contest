@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
        @import url('https://fonts.googleapis.com/css2?family=Poller+One&display=swap');
-        /* animation */
+       
+       /* animation */
         @keyframes 수염위{ 
             from {
                 transform: rotate(-77deg);
@@ -41,6 +42,7 @@
                 transform: rotate(290deg);
             }
         }   
+       
         /*setting*/
         :root{
             --pri: #ffb148;
@@ -50,20 +52,28 @@
 
         /*reset*/
         body{
-            position:relative;
+           
             font-family:'Poller One', cursive;
             margin: 0;
             padding: 0;
             background-color: #c50026;
-        
                     
         
         }
+
+        /* ladyout */
+        /* design */
+        
+        *,
+        *:after,
+        *:before {
+            box-sizing: border-box;
+        }
+        
         .do-code{
             position:absolute;
             top:160px;
-            left:290px;
-            margin-bottom: 3px;
+            left:290px; 
             transform: rotate(90deg);
             font-size: 40px;
         }
@@ -75,24 +85,14 @@
             transform:rotate(90deg);
         }
       
-        /* ladyout */
-        /* design */
-
-        *,
-        *:after,
-        *:before {
-            box-sizing: border-box;
-        }
-
-     
+        
         .leon{
             position: relative;
-            top:100px;
-            margin: 50px auto;
+            margin: 80px auto;
             width: 500px;
             height: 500px;
             overflow:hidden;
-            /* background-color: white; */
+            
         }
 
         .leon .ear{
@@ -111,7 +111,7 @@
             transform: rotate(-22deg);
             border-radius:5px 120px 1px 30px;
             box-shadow: 0 0 20px rgba(0,0,0, 0.5);
-/*             animation: 귀왼쪽 0.8s infinite alternate;  */
+
         }
 
         
@@ -121,7 +121,7 @@
             transform: rotate(30deg);
             border-radius: 100px 5px 20px 1px;
             box-shadow: 0 0 20px rgba(0,0,0,0.5);
-/*             animation: 귀오른쪽 0.8s infinite alternate; */
+
         }
         
         .leon .earline.left{
@@ -489,12 +489,37 @@
             width:100px;
             left: 149px;
         }
+     
+
+        @media(max-width: 1130px){
+       
+            .do-code{
+            transform: none;
+            margin-top: 450px;
+            left: 50%;
+            transform:translate(-50%,0);
+            position:fixed;
+            
+        }
+        .name{
+            transform: none;
+            margin: 480px auto;
+            left: 50%;
+            transform:translate(-50%,0);
+            position:fixed;
+            
+        }
+            };
+
+        
     </style>
     <title></title>
 </head>
 <body>
+    <div class="leon-name">
    <h1 class="do-code">코딩할</h1>
    <h2 class="name">LEON</h2>
+   </div>
     <div class="leon">
         <div class="ear left">
             <div class="earline left"></div>
